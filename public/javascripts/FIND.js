@@ -61,7 +61,7 @@ function CreateTableAuthor(data){
     for (let book in data){
         retVal +=
             '<tr> \n' +
-            '	<td>' + data[book]["name"] + '</td> \n' +
+            '	<td>' + data[book]["bookName"] + '</td> \n' +
             '	<td>' + data[book]["author"] + '</td> \n' +
             '	<td>' + data[book]["isbn"] + '</td> \n' +
             '	<td>' + "$" + data[book]["price"] + '</td> \n' +
@@ -92,7 +92,7 @@ function CreateTableIsbn(data){
     // for (let book in data){
     retVal +=
         '<tr> \n' +
-        '	<td>' + data["name"] + '</td> \n' +
+        '	<td>' + data["bookName"] + '</td> \n' +
         '	<td>' + data["author"] + '</td> \n' +
         '	<td>' + data["isbn"] + '</td> \n' +
         '	<td>' + "$" + data["price"] + '</td> \n' +
