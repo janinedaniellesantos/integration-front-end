@@ -1,7 +1,7 @@
 function findData() {
 
     if (document.getElementById('isbn').value === "" || document.getElementById('isbn').value.length === 0) {
-        alert("ERROR: empty request try again");
+        alert("ERROR: empty request");
         return;
     }
 
@@ -43,7 +43,7 @@ function findAuthor() {
 function CreateTableAuthor(data){
     let retVal = "";
     if(data === null || data.length === 0){
-        alert("not found try again");
+        alert("not found");
         return;
     }
     retVal =
@@ -61,7 +61,7 @@ function CreateTableAuthor(data){
     for (let book in data){
         retVal +=
             '<tr> \n' +
-            '	<td>' + data[book]["bookName"] + '</td> \n' +
+            '	<td>' + data[book]["name"] + '</td> \n' +
             '	<td>' + data[book]["author"] + '</td> \n' +
             '	<td>' + data[book]["isbn"] + '</td> \n' +
             '	<td>' + "$" + data[book]["price"] + '</td> \n' +
@@ -74,7 +74,6 @@ function CreateTableAuthor(data){
         '</div> \n ' ;
     return retVal;
 }
-
 
 function CreateTableIsbn(data){
     let retVal = "";
@@ -90,7 +89,7 @@ function CreateTableIsbn(data){
         '	</thead> \n' +
         '	<tbody> \n';
 
-
+    // for (let book in data){
     retVal +=
         '<tr> \n' +
         '	<td>' + data["name"] + '</td> \n' +
@@ -98,7 +97,7 @@ function CreateTableIsbn(data){
         '	<td>' + data["isbn"] + '</td> \n' +
         '	<td>' + "$" + data["price"] + '</td> \n' +
         '</tr> \n';
-
+    // }
 
     retVal +=
         '</tbody> \n' +
